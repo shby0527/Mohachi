@@ -21,6 +21,9 @@ namespace AbPasswdPlugin
 		/// </summary>
 		/// <value>The password.</value>
 		public string Password{ get; set; }
+
+
+
 		#region IPlugin implementation
 		/// <summary>
 		/// Loading this instance.
@@ -74,6 +77,23 @@ namespace AbPasswdPlugin
 				tmp |= a [i] ^ b [i];
 			}
 			return(tmp == 0);
+		}
+		/// <summary>
+		/// Gets the crypto version.
+		/// </summary>
+		/// <returns>The crypto version.</returns>
+		/// <param name="Date">Date.</param>
+		public static string GetCryptoVersion(byte[] Date)
+		{
+			using (MemoryStream ms = new MemoryStream()) {
+				BinaryFormatter bf = new BinaryFormatter ();
+				ms.Write (Date, 0, Date.Length);
+				ms.Position = 0;
+				PasswdBase tmp = bf.Deserialize (ms) as PasswdBase;
+				if (tmp == null)
+					return null;
+				return tmp.VersionHash;
+			}
 		}
 		/// <summary>
 		/// Check the specified Date.

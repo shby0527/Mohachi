@@ -64,6 +64,7 @@ namespace AbPasswdPlugin
 						rnd.GetNonZeroBytes (KeyBuffer);
 						KeyBuffer = sha512.ComputeHash (KeyBuffer);
 						extra.Key = KeyBuffer;
+						hash512.Key = KeyBuffer;
 						this.date.ExtraInfo = extra;
 						byte[] pwdBuffer;
 						byte[] pwdDate = Encoding.UTF8.GetBytes (this.Password);
@@ -86,7 +87,7 @@ namespace AbPasswdPlugin
 			using (HMACSHA512 hash512 = new HMACSHA512(infos.Key)) {
 				byte[] pwdDate = Encoding.UTF8.GetBytes (this.Password);
 				byte[] pwdBuffer = hash512.ComputeHash (pwdDate);
-				for (int i =0; i<infos.Count; i++) {
+				for (int i =0; i<=infos.Count; i++) {
 					pwdBuffer = hash512.ComputeHash (pwdBuffer);
 				}
 				return this.SlowCompose (info.Password, pwdBuffer);
@@ -99,8 +100,18 @@ namespace AbPasswdPlugin
 	/// Cry extra info.
 	/// </summary>
 	[Serializable]
-	public sealed class CryExtInfo
+	public class CryExtInfo:System.Runtime.Serialization.ISerializable
 	{
+
+		public CryExtInfo()
+		{
+		}
+
+		protected CryExtInfo(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
+		{
+			this.Count = info.GetInt32 ("Count");
+			this.Key = (byte[])info.GetValue ("Key", typeof(byte[]));
+		}
 		/// <summary>
 		/// Gets or sets the count.
 		/// </summary>
@@ -112,6 +123,16 @@ namespace AbPasswdPlugin
 		/// </summary>
 		/// <value>The key.</value>
 		public byte[] Key{ get; set; }
+
+		#region ISerializable implementation
+
+		public void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
+		{
+			info.AddValue ("Key", this.Key);
+			info.AddValue ("Count", this.Count);
+		}
+
+		#endregion
 	}
 }
 
