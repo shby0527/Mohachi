@@ -107,7 +107,8 @@ namespace AbPasswdPlugin
 		{
 		}
 
-		protected CryExtInfo(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
+		protected CryExtInfo(System.Runtime.Serialization.SerializationInfo info, 
+		                     System.Runtime.Serialization.StreamingContext context)
 		{
 			this.Count = info.GetInt32 ("Count");
 			this.Key = (byte[])info.GetValue ("Key", typeof(byte[]));
@@ -126,7 +127,8 @@ namespace AbPasswdPlugin
 
 		#region ISerializable implementation
 
-		public void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
+		public void GetObjectData (System.Runtime.Serialization.SerializationInfo info, 
+		                           System.Runtime.Serialization.StreamingContext context)
 		{
 			info.AddValue ("Key", this.Key);
 			info.AddValue ("Count", this.Count);
