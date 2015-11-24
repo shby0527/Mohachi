@@ -23,7 +23,7 @@ namespace AbPasswdPlugin
 		/// Initializes a new instance of the <see cref="AbPasswdPlugin.Crypt"/> class.
 		/// </summary>
 		public Crypt ()
-			:base("")
+			:base("",100,200)
 		{
 			this.date = new PasswdBase ();
 		}
@@ -49,6 +49,30 @@ namespace AbPasswdPlugin
 		{
 			return true;
 		}
+		/// <summary>
+		/// Gets or sets the minimum count.
+		/// </summary>
+		/// <value>The minimum count.</value>
+		public int MinCount{ get; set;}
+		/// <summary>
+		/// Gets or sets the max count.
+		/// </summary>
+		/// <value>The max count.</value>
+		public int MaxCount{ get; set;}
+		#region implemented abstract members of AbsPlugin
+		/// <summary>
+		/// set two args with Stram
+		/// </summary>
+		/// <param name="args">Arguments.</param>
+		public override void setOtherArgs (object[] args)
+		{
+			if (args.Length < 2)
+				throw new ArgumentException ("the args count is too small");
+			this.MinCount = (int)args [0];
+			this.MaxCount = (int)args [1];
+		}
+
+		#endregion
 
 		protected override PasswdBase Secret ()
 		{
@@ -58,7 +82,7 @@ namespace AbPasswdPlugin
 				using (RNGCryptoServiceProvider rnd = new RNGCryptoServiceProvider()) {
 					Random cntRnd = new Random ();
 					CryExtInfo extra = new CryExtInfo ();
-					extra.Count = cntRnd.Next (100, 200);
+					extra.Count = cntRnd.Next (this.MinCount, this.MaxCount);
 					using (SHA512CryptoServiceProvider sha512 = new SHA512CryptoServiceProvider()) {
 						byte[] KeyBuffer = new byte[512];
 						rnd.GetNonZeroBytes (KeyBuffer);

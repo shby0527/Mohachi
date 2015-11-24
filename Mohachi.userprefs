@@ -1,13 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="UBB2HTML/Properties/AssemblyInfo.cs">
-    <Files>
-      <File FileName="AbTextProcess/Properties/AssemblyInfo.cs" Line="7" Column="94" />
-      <File FileName="AbTextProcess/AbTextProc.cs" Line="27" Column="16" />
-      <File FileName="Mohachi/web.config" Line="37" Column="51" />
-      <File FileName="UBB2HTML/Properties/AssemblyInfo.cs" Line="23" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

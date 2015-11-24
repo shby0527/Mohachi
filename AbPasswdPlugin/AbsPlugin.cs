@@ -11,11 +11,14 @@ namespace AbPasswdPlugin
 	/// </summary>
 	public abstract class AbsPlugin : IPlugin
 	{
-		protected AbsPlugin (string password)
+		protected AbsPlugin (string password,params object[] oargs)
 		{
 			this.Password = password;
+			this.setOtherArgs (oargs);
 		}
 
+
+		public abstract void setOtherArgs (object[] args);
 		/// <summary>
 		/// Gets the password.
 		/// </summary>

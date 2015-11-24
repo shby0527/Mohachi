@@ -12,7 +12,5 @@ namespace Mohachi {
 	
 	
 	public partial class index {
-		
-		protected System.Web.UI.HtmlControls.HtmlForm form1;
 	}
 }
