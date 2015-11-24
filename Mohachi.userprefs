@@ -1,16 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="test/Test/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UBB2HTML/Properties/AssemblyInfo.cs">
     <Files>
-      <File FileName="Mohachi/Global.asax" Line="1" Column="1" />
-      <File FileName="Mohachi/Global.asax.cs" Line="26" Column="31" />
-      <File FileName="AbPasswdPlugin/AbsPlugin.cs" Line="1" Column="1" />
-      <File FileName="AbPasswdPlugin/PasswdBase.cs" Line="1" Column="1" />
-      <File FileName="AbPasswdPlugin/Crypt.cs" Line="1" Column="1" />
-      <File FileName="test/Test/Program.cs" Line="1" Column="1" />
-      <File FileName="Mohachi/web.config" Line="1" Column="1" />
-      <File FileName="Mohachi/index.aspx" Line="1" Column="1" />
-      <File FileName="Mohachi/index.aspx.cs" Line="1" Column="1" />
+      <File FileName="AbTextProcess/Properties/AssemblyInfo.cs" Line="7" Column="94" />
+      <File FileName="AbTextProcess/AbTextProc.cs" Line="27" Column="16" />
+      <File FileName="Mohachi/web.config" Line="37" Column="51" />
+      <File FileName="UBB2HTML/Properties/AssemblyInfo.cs" Line="23" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
