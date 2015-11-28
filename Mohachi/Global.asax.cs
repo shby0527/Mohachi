@@ -16,14 +16,14 @@ namespace Mohachi
 		
 		protected void Application_Start (Object sender, EventArgs e)
 		{
-			Configuration cfg = WebConfigurationManager.OpenWebConfiguration ("~");
+			/*Configuration cfg = WebConfigurationManager.OpenWebConfiguration ("~");
 			AppSettingsSection settings = (AppSettingsSection)cfg.GetSection ("appSettings");
 			string plugin = settings.Settings ["crypto"].Value;
 			string mpath = this.Server.MapPath ("~/bin");
 			IPluginArray<AbsPlugin> arr = PluginLoader<AbsPlugin>.Load (mpath + "/" + plugin);
 			this.Application.Lock ();
 			this.Application.Add ("crypto", arr);
-			this.Application.UnLock ();
+			this.Application.UnLock ();*/
 		}
 
 		protected void Session_Start (Object sender, EventArgs e)
