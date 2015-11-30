@@ -30,6 +30,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="PluginInterface">
+      <HintPath>..\..\..\lib\PluginLoader\PluginInterface.dll</HintPath>
+    </Reference>
     <Reference Include="PluginLoader">
       <HintPath>..\..\..\lib\PluginLoader\PluginLoader.dll</HintPath>
     </Reference>

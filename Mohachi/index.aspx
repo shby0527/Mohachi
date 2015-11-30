@@ -7,7 +7,7 @@
 </head>
 <body>
 <div>
-<img height="400" width="700" src="<%=this.Request.QueryString["rid"]%>.jpg" alt="" />
+
 </div>
 </body>
 </html>
