@@ -7,12 +7,24 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbPasswdPlugin", "AbPasswdP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "test\Test\Test.csproj", "{FF5BD5E0-6269-49A2-A67B-D741973357CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbTextProcess", "AbTextProcess\AbTextProcess.csproj", "{55C1BDE2-DD6B-4555-8D78-4B1361284B4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UBB2HTML", "UBB2HTML\UBB2HTML.csproj", "{4F2137D9-8654-4133-A13C-7FF1289B804C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F2137D9-8654-4133-A13C-7FF1289B804C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F2137D9-8654-4133-A13C-7FF1289B804C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F2137D9-8654-4133-A13C-7FF1289B804C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F2137D9-8654-4133-A13C-7FF1289B804C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55C1BDE2-DD6B-4555-8D78-4B1361284B4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55C1BDE2-DD6B-4555-8D78-4B1361284B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55C1BDE2-DD6B-4555-8D78-4B1361284B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55C1BDE2-DD6B-4555-8D78-4B1361284B4F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B3CA7BC1-0B17-4284-9EE9-2E36BE453112}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B3CA7BC1-0B17-4284-9EE9-2E36BE453112}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3CA7BC1-0B17-4284-9EE9-2E36BE453112}.Release|Any CPU.ActiveCfg = Release|Any CPU

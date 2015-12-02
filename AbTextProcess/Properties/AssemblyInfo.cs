@@ -3,8 +3,8 @@ using System.Runtime.CompilerServices;
 
 // Information about this assembly is defined by the following attributes. 
 // Change them to the values specific to your project.
-[assembly: AssemblyTitle ("AbPasswdPlugin")]
-[assembly: AssemblyDescription ("Password Auth Abstract Plugin,and this provider a default crypto motd")]
+[assembly: AssemblyTitle ("AbTextProcess")]
+[assembly: AssemblyDescription ("this is provider a plugin abstract,it's used to text process")]
 [assembly: AssemblyConfiguration ("")]
 [assembly: AssemblyCompany ("")]
 [assembly: AssemblyProduct ("")]

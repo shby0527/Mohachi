@@ -11,19 +11,19 @@ namespace AbPasswdPlugin
 	/// </summary>
 	public abstract class AbsPlugin : IPlugin
 	{
-		protected AbsPlugin (string password)
+		protected AbsPlugin (string password, params object[] oargs)
 		{
 			this.Password = password;
+			this.setOtherArgs (oargs);
 		}
+
+		public abstract void setOtherArgs (object[] args);
 
 		/// <summary>
 		/// Gets the password.
 		/// </summary>
 		/// <value>The password.</value>
 		public string Password{ get; set; }
-
-
-
 		#region IPlugin implementation
 		/// <summary>
 		/// Loading this instance.
@@ -64,13 +64,14 @@ namespace AbPasswdPlugin
 		/// <returns><c>true</c>, if secret was checked, <c>false</c> otherwise.</returns>
 		/// <param name="info">Info.</param>
 		protected abstract bool CheckSecret (PasswdBase info);
+
 		/// <summary>
 		/// Slows the compose.
 		/// </summary>
 		/// <returns><c>true</c>, if compose was slowed, <c>false</c> otherwise.</returns>
 		/// <param name="a">The alpha component.</param>
 		/// <param name="b">The blue component.</param>
-		protected bool SlowCompose(byte[] a,byte[] b)
+		protected bool SlowCompose (byte[] a, byte[] b)
 		{
 			int tmp = a.Length ^ b.Length;
 			for (int i=0; i<a.Length && i<b.Length; i++) {
@@ -78,12 +79,13 @@ namespace AbPasswdPlugin
 			}
 			return(tmp == 0);
 		}
+
 		/// <summary>
 		/// Gets the crypto version.
 		/// </summary>
 		/// <returns>The crypto version.</returns>
 		/// <param name="Date">Date.</param>
-		public static string GetCryptoVersion(byte[] Date)
+		public static string GetCryptoVersion (byte[] Date)
 		{
 			using (MemoryStream ms = new MemoryStream()) {
 				BinaryFormatter bf = new BinaryFormatter ();
@@ -95,6 +97,7 @@ namespace AbPasswdPlugin
 				return tmp.VersionHash;
 			}
 		}
+
 		/// <summary>
 		/// Check the specified Date.
 		/// the date is from disk or datebase

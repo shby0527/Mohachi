@@ -3,8 +3,8 @@ using System.Runtime.CompilerServices;
 
 // Information about this assembly is defined by the following attributes. 
 // Change them to the values specific to your project.
-[assembly: AssemblyTitle ("AbPasswdPlugin")]
-[assembly: AssemblyDescription ("Password Auth Abstract Plugin,and this provider a default crypto motd")]
+[assembly: AssemblyTitle ("UBB2HTML")]
+[assembly: AssemblyDescription ("this is a Plugin for Mohachi,AbTestPorcess,To Make UBB Code Translate To HTML Code")]
 [assembly: AssemblyConfiguration ("")]
 [assembly: AssemblyCompany ("")]
 [assembly: AssemblyProduct ("")]
