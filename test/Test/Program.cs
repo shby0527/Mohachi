@@ -6,7 +6,7 @@ namespace Test
 	{
 		public static void Main (string[] args)
 		{
-			AbsPlugin plug = new Crypt ();
+			AbsPlugin plug = new PBKDF2 ();
 			plug.Loading ();
 			plug.Password = Console.ReadLine ();
 			byte[] testo = plug.GetBinary;

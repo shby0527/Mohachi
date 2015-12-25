@@ -17,7 +17,7 @@ namespace AbPasswdPlugin
 			this.setOtherArgs (oargs);
 		}
 
-		public abstract void setOtherArgs (object[] args);
+		public abstract void setOtherArgs (params object[] args);
 
 		/// <summary>
 		/// Gets the password.

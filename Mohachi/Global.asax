@@ -1,1 +1,1 @@
-<%@ Application Inherits="Mohachi.Global" %>
+<%@ Application Inherits="Mohachi.MvcApplication" %>

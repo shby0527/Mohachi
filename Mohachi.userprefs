@@ -1,14 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AbPasswdPlugin/AbsPlugin.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UBB2HTML/RulesConfigure.cs">
     <Files>
-      <File FileName="AbPasswdPlugin/Crypt.cs" Line="5" Column="27" />
-      <File FileName="AbPasswdPlugin/AbsPlugin.cs" Line="31" Column="26" />
+      <File FileName="AbPasswdPlugin/AbsPlugin.cs" Line="1" Column="1" />
+      <File FileName="test/Test/Program.cs" Line="1" Column="1" />
+      <File FileName="AbPasswdPlugin/PasswdBase.cs" Line="1" Column="1" />
+      <File FileName="UBB2HTML/Ubb2HtmlPlugin.cs" Line="52" Column="20" />
       <File FileName="AbTextProcess/AbTextProc.cs" Line="1" Column="1" />
-      <File FileName="UBB2HTML/Ubb2HtmlPlugin.cs" Line="1" Column="1" />
-      <File FileName="test/Test/Program.cs" Line="9" Column="4" />
-      <File FileName="Mohachi/index.aspx.designer.cs" Line="1" Column="1" />
-      <File FileName="Mohachi/index.aspx" Line="10" Column="1" />
+      <File FileName="PBKDF2Cypto/Properties/AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="PBKDF2Cypto/PBKDF2.cs" Line="152" Column="3" />
+      <File FileName="UBB2HTML/RulesConfigure.cs" Line="71" Column="4" />
+      <File FileName="UBB2HTML/Exceptions/BadXmlConfigureFile.cs" Line="15" Column="8" />
+      <File FileName="test/UBB2HTMLTest/Program.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
