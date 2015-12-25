@@ -54,7 +54,6 @@ namespace UBB2HTML
 
 		public override bool UnLoading ()
 		{
-			this.m_allRegex.Clear ();
 			return base.UnLoading ();
 		}
 		#region implemented abstract members of AbTextProc
