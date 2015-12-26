@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+	<version ver="1.0" />
+	<rule>
+		<regex>\[img\](https?://[^\[]{1,})\[/img\]</regex>
+		<replace>&lt;img src=&quot;{0}&quot; alt=&quot;{0}&quot; /&gt;</replace>
+	</rule>
+	<rule>
+		<regex>\[url=(https?://[^\]]{1,})\]([^\[]{1,})\[/url\]</regex>
+		<replace>&lt;a href=&quot;{0}&quot;&gt;{1}&lt;/a&gt;</replace>
+	</rule>
+	<rule>
+		<regex>\[url\](https?://[^\[]{1,})\[/url\]</regex>
+		<replace>&lt;a href=&quot;{0}&quot;&gt;{0}&lt;/a&gt;</replace>
+	</rule>
+</rules>

@@ -69,7 +69,7 @@ namespace UBB2HTML
 				{
 					string[] args = new string[match.Groups.Count - 1];
 					for (int j = 1; j<match.Groups.Count; j++) {
-						args [j - 1] = match.Groups [i].Value;
+						args [j - 1] = match.Groups [j].Value;
 					}
 					return string.Format (i.Rule, args);
 				});

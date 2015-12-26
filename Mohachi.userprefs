@@ -1,8 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="UBB2HTML/Ubb2HtmlPlugin.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="test/UBB2HTMLTest/Program.cs">
     <Files>
-      <File FileName="UBB2HTML/Ubb2HtmlPlugin.cs" Line="62" Column="4" />
+      <File FileName="UBB2HTML/Ubb2HtmlPlugin.cs" Line="74" Column="32" />
+      <File FileName="test/UBB2HTMLTest/Program.cs" Line="14" Column="52" />
+      <File FileName="UBB2HTML/RulesConfigure.cs" Line="287" Column="1" />
+      <File FileName="Mohachi/Global.asax.cs" Line="24" Column="62" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
