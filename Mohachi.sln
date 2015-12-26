@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MohachiControllersTest", "t
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbDatabaseHelper", "AbDatabaseHelper\AbDatabaseHelper.csproj", "{302550B2-0B56-4EAA-AF89-3777B7654CC3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySqlDatabaseHelper", "MySqlDatabaseHelper\MySqlDatabaseHelper.csproj", "{A245BA13-F39D-4FEE-8EB2-AC000FCA523A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MysqlHelperTest", "test\MysqlHelperTest\MysqlHelperTest.csproj", "{54FCFD0F-CC87-4847-A911-61E6C30D2FDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,10 @@ Global
 		{4F2137D9-8654-4133-A13C-7FF1289B804C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F2137D9-8654-4133-A13C-7FF1289B804C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F2137D9-8654-4133-A13C-7FF1289B804C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54FCFD0F-CC87-4847-A911-61E6C30D2FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54FCFD0F-CC87-4847-A911-61E6C30D2FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54FCFD0F-CC87-4847-A911-61E6C30D2FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54FCFD0F-CC87-4847-A911-61E6C30D2FDC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{55C1BDE2-DD6B-4555-8D78-4B1361284B4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{55C1BDE2-DD6B-4555-8D78-4B1361284B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55C1BDE2-DD6B-4555-8D78-4B1361284B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,6 +49,10 @@ Global
 		{7CFC9F54-F48B-432B-B52C-4BC922534925}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CFC9F54-F48B-432B-B52C-4BC922534925}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CFC9F54-F48B-432B-B52C-4BC922534925}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A245BA13-F39D-4FEE-8EB2-AC000FCA523A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A245BA13-F39D-4FEE-8EB2-AC000FCA523A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A245BA13-F39D-4FEE-8EB2-AC000FCA523A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A245BA13-F39D-4FEE-8EB2-AC000FCA523A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A4E176E6-970F-47FF-9E18-F75409B74E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A4E176E6-970F-47FF-9E18-F75409B74E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4E176E6-970F-47FF-9E18-F75409B74E29}.Release|Any CPU.ActiveCfg = Release|Any CPU

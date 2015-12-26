@@ -12,7 +12,8 @@ namespace AbDatabaseHelper
 	/// </summary>
 	public delegate bool DatabaseTransactionDelegate (DbCommand cmd, DbTransaction trans);
 	/// <summary>
-	/// Ab connector.
+	/// Database Helper's abstract
+	/// for the plugin to load
 	/// </summary>
 	public abstract class AbDbHelper:IPlugin
 	{
@@ -35,7 +36,39 @@ namespace AbDatabaseHelper
 		/// <returns>the SQL used rows</returns>
 		/// <param name="SQL">SQL</param>
 		/// <param name="args">Arguments.</param>
-		public abstract int ExecuteSQLWithoutResult (string SQL, params DbParameter[] args);
+		public abstract int ExecuteSQLNonResult (string SQL, params DbParameter[] args);
+
+		/// <summary>
+		/// Executes the SQL with transaction.
+		/// </summary>
+		/// <returns>sql execute resulte</returns>
+		/// <param name="method">Method.</param>
+		/// <param name="level">Level.</param>
+		public abstract DataSet ExecuteSQLWithTrans (DatabaseTransactionDelegate method, 
+		                                             IsolationLevel level = IsolationLevel.ReadCommitted);
+
+		/// <summary>
+		/// Executes the SQL with trans non result.
+		/// </summary>
+		/// <returns>count of used rows</returns>
+		/// <param name="method">Method.</param>
+		/// <param name="level">Level.</param>
+		public abstract int ExecuteSQLWithTransNonResult (DatabaseTransactionDelegate method, 
+		                                                  IsolationLevel level = IsolationLevel.ReadCommitted);
+
+		/// <summary>
+		/// Gets the connection.
+		/// </summary>
+		/// <value>The connection.</value>
+		public abstract DbConnection Connection{ get; }
+
+		/// <summary>
+		/// Executes the SQL with reader.
+		/// </summary>
+		/// <returns>the data reader</returns>
+		/// <param name="SQL">SQL</param>
+		/// <param name="args">Arguments.</param>
+		public abstract DbDataReader ExecuteSQLWithReader (string SQL, params DbParameter[] args);
 		#region IPlugin implementation
 		public virtual bool Loading ()
 		{

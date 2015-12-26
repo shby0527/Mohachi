@@ -1,11 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AbDatabaseConnector/AbDbHelper.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MySqlDatabaseHelper/MySqlDbHelperPlugin.cs">
     <Files>
-      <File FileName="test/UBB2HTMLTest/Program.cs" Line="24" Column="1" />
-      <File FileName="UBB2HTML/RulesConfigure.cs" Line="56" Column="43" />
-      <File FileName="Mohachi/Views/Home/Index.aspx" Line="7" Column="7" />
-      <File FileName="AbDatabaseConnector/AbDbHelper.cs" Line="31" Column="3" />
+      <File FileName="MySqlDatabaseHelper/MySqlDbHelperPlugin.cs" Line="21" Column="4" />
+      <File FileName="AbTextProcess/AbTextProc.cs" Line="17" Column="24" />
+      <File FileName="PBKDF2Cypto/PBKDF2.cs" Line="13" Column="84" />
+      <File FileName="AbDatabaseHelper/AbDbHelper.cs" Line="14" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -9,9 +9,9 @@ namespace AbPasswdPlugin
 	/// <summary>
 	/// Abs plugin for Passwd Secret.
 	/// </summary>
-	public abstract class AbsPlugin : IPlugin
+	public abstract class AbsPassword : IPlugin
 	{
-		protected AbsPlugin (string password, params object[] oargs)
+		protected AbsPassword (string password, params object[] oargs)
 		{
 			this.Password = password;
 			this.setOtherArgs (oargs);

@@ -13,7 +13,7 @@ namespace AbPasswdPlugin
 	[DingerInfo(Address = "null",EMail = "umi@hayama.cf",Name = "umi",Phone = "null")]
 	[PluginExtraInfo(Commit = "It is Default Plugin , Prority is 0",Company = "null",ReleaseTime = "2015.11",UpdateTime = "2015.11")]
 	[PluginInfo("202B40094A34793BBE521B1CFB8AA651A4242B499A8704E9053549F29048716E",0,Name = "PBKDF2", Version = "1.0.0",Author = "umi")]
-	public class PBKDF2:AbsPlugin
+	public class PBKDF2:AbsPassword
 	{
 		/// <summary>
 		/// The date.
@@ -110,7 +110,7 @@ namespace AbPasswdPlugin
 						byte[] pwdBuffer;
 						byte[] pwdDate = Encoding.UTF8.GetBytes (this.Password);
 						//now we add the salt to the string
-						byte[] pwdWithSalt = new byte[pwdDate.Length+extra.Salt.Length];
+						byte[] pwdWithSalt = new byte[pwdDate.Length + extra.Salt.Length];
 						Array.Copy (pwdDate, pwdWithSalt, pwdDate.Length);
 						Array.Copy (extra.Salt, 0, pwdWithSalt, pwdDate.Length, extra.Salt.Length);
 						pwdBuffer = hash512.ComputeHash (pwdWithSalt);
@@ -131,7 +131,7 @@ namespace AbPasswdPlugin
 				return false;
 			using (HMACSHA512 hash512 = new HMACSHA512(infos.Key)) {
 				byte[] pwdDate = Encoding.UTF8.GetBytes (this.Password);
-				byte[] pwdWithSalt = new byte[pwdDate.Length+infos.Salt.Length];
+				byte[] pwdWithSalt = new byte[pwdDate.Length + infos.Salt.Length];
 				Array.Copy (pwdDate, pwdWithSalt, pwdDate.Length);
 				Array.Copy (infos.Salt, 0, pwdWithSalt, pwdDate.Length, infos.Salt.Length);
 				byte[] pwdBuffer = hash512.ComputeHash (pwdWithSalt);
