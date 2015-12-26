@@ -93,5 +93,9 @@
       <Project>{55C1BDE2-DD6B-4555-8D78-4B1361284B4F}</Project>
       <Name>AbTextProcess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AbDatabaseHelper\AbDatabaseHelper.csproj">
+      <Project>{302550B2-0B56-4EAA-AF89-3777B7654CC3}</Project>
+      <Name>AbDatabaseHelper</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

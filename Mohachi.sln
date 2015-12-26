@@ -17,12 +17,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mohachi", "Mohachi\Mohachi.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MohachiControllersTest", "test\MohachiControllersTest\MohachiControllersTest.csproj", "{C1EADBE2-2897-474C-B97B-99BD4EE3790F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbDatabaseHelper", "AbDatabaseHelper\AbDatabaseHelper.csproj", "{302550B2-0B56-4EAA-AF89-3777B7654CC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{302550B2-0B56-4EAA-AF89-3777B7654CC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{302550B2-0B56-4EAA-AF89-3777B7654CC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{302550B2-0B56-4EAA-AF89-3777B7654CC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{302550B2-0B56-4EAA-AF89-3777B7654CC3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4F2137D9-8654-4133-A13C-7FF1289B804C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4F2137D9-8654-4133-A13C-7FF1289B804C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F2137D9-8654-4133-A13C-7FF1289B804C}.Release|Any CPU.ActiveCfg = Release|Any CPU
