@@ -48,18 +48,33 @@ namespace UBB2HTML
 		private void LoadRules ()
 		{
 			using (Stream stream = File.Open(this.RegexConfigFile,FileMode.Open)) {
-				this.m_allRegex = new RulesConfigure (stream);
+				this.m_allRegex = RulesConfigure.CreateInstance (stream);
 			}
 		}
 
 		public override bool UnLoading ()
 		{
+			this.m_allRegex.Dispose ();
 			return base.UnLoading ();
 		}
 		#region implemented abstract members of AbTextProc
 		protected override string Processing ()
 		{
-			return this.InputText;
+			if (this.InputText == null)
+				return null;
+			string tmp = this.InputText;
+			foreach (var i in this.m_allRegex.RegRules) {
+				Regex reg = new Regex (i.Regex, RegexOptions.Multiline);
+				tmp = reg.Replace (tmp, match =>
+				{
+					string[] args = new string[match.Groups.Count - 1];
+					for (int j = 1; j<match.Groups.Count; j++) {
+						args [j - 1] = match.Groups [i].Value;
+					}
+					return string.Format (i.Rule, args);
+				});
+			}
+			return tmp;
 		}
 		#endregion
 	}

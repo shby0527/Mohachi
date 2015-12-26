@@ -45,6 +45,12 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PluginLoader">
+      <HintPath>..\..\lib\PluginLoader\PluginLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="PluginInterface">
+      <HintPath>..\..\lib\PluginLoader\PluginInterface.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\" />
@@ -70,7 +76,22 @@
     <MonoDevelop>
       <Properties VerifyCodeBehindFields="True" VerifyCodeBehindEvents="True">
         <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+        <WebDeployTargets>
+          <Target Name="">
+            <FileCopier Handler="MonoDevelop.Deployment.LocalFileCopyHandler" TargetDirectory="/home/umi/monopro/MohachiWebBin" ctype="LocalFileCopyConfiguration" />
+          </Target>
+        </WebDeployTargets>
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <ItemGroup>
+    <ProjectReference Include="..\AbPasswdPlugin\AbPasswdPlugin.csproj">
+      <Project>{B3CA7BC1-0B17-4284-9EE9-2E36BE453112}</Project>
+      <Name>AbPasswdPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AbTextProcess\AbTextProcess.csproj">
+      <Project>{55C1BDE2-DD6B-4555-8D78-4B1361284B4F}</Project>
+      <Name>AbTextProcess</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

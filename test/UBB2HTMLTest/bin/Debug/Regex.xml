@@ -5,4 +5,12 @@
 		<regex>A</regex>
 		<replace>B</replace>
 	</rule>
+	<rule>
+		<regex>C</regex>
+		<replace>D</replace>
+	</rule>
+	<rule>
+		<regex>E</regex>
+		<replace>F</replace>
+	</rule>
 </rules>

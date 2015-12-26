@@ -7,7 +7,7 @@ namespace UBB2HTMLTest
 	{
 		public static void Main (string[] args)
 		{
-			RulesConfigure con = new RulesConfigure ("Regex.xml");
+			RulesConfigure con = RulesConfigure.CreateInstance ("Regex.xml");
 
 		}
 	}
