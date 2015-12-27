@@ -1,6 +1,8 @@
 using System;
 using System.Data;
 using System.Data.Common;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 using AbDatabaseHelper;
 using PluginLoader.PluginAttribute;
 using PluginLoader.Configure;
