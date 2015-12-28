@@ -1,4 +1,9 @@
 using System;
+using System.Data;
+using AbDatabaseHelper;
+using MySqlDatabaseHelper;
+using MySql.Data.MySqlClient;
+using System.Data.Common;
 
 namespace MysqlHelperTest
 {
@@ -6,7 +11,9 @@ namespace MysqlHelperTest
 	{
 		public static void Main (string[] args)
 		{
-			Console.WriteLine ("Hello World!");
+			AbDbHelper help = new MySqlDbHelperPlugin ();
+			help.Loading ();
+			help.UnLoading ();
 		}
 	}
 }

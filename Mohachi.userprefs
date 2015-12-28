@@ -1,15 +1,19 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MySqlDatabaseHelper/MySqlDbHelperPlugin.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="test/MysqlHelperTest/Program.cs">
     <Files>
-      <File FileName="MySqlDatabaseHelper/MySqlDbHelperPlugin.cs" Line="27" Column="36" />
+      <File FileName="MySqlDatabaseHelper/MySqlDbHelperPlugin.cs" Line="112" Column="1" />
       <File FileName="AbTextProcess/AbTextProc.cs" Line="1" Column="1" />
       <File FileName="PBKDF2Cypto/PBKDF2.cs" Line="1" Column="1" />
       <File FileName="AbDatabaseHelper/AbDbHelper.cs" Line="1" Column="1" />
+      <File FileName="test/MysqlHelperTest/Program.cs" Line="15" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/home/umi/monopro/Mohachi/MySqlDatabaseHelper/MySqlDbHelperPlugin.cs" line="36" column="4" />
+      <Breakpoint file="/home/umi/monopro/Mohachi/AbDatabaseHelper/AbDbHelper.cs" line="57" column="5" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

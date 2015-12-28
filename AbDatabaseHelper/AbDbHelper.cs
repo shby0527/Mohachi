@@ -11,7 +11,7 @@ namespace AbDatabaseHelper
 	/// if it return true,then means Transaction is success
 	/// else is fail,it may to rollback
 	/// </summary>
-	public delegate bool DatabaseTransactionDelegate (DbCommand cmd, DbTransaction trans);
+	public delegate int DatabaseTransactionDelegate (DbCommand cmd);
 	/// <summary>
 	/// Database Helper's abstract
 	/// for the plugin to load
@@ -48,18 +48,18 @@ namespace AbDatabaseHelper
 		/// <value>The default databse.</value>
 		protected string DefaultDatabse{ get; set; }
 
-		/// <summary>
+		/// <summary>(a,b)
 		/// Gets the connection string.
 		/// </summary>
 		/// <value>The connection string.</value>
 		protected virtual string ConnectionString {
 			get {
 				return string.Format ("server={0},{1};uid={2};pwd={3};database={4}",
-				                     this.DatabaseAddr,
-				                     this.DatabasePorts,
-				                     this.DatabaseUser,
-				                     this.DatabasePassword,
-				                     this.DefaultDatabse);
+				                      this.DatabaseAddr,
+				                      this.DatabasePorts,
+				                      this.DatabaseUser,
+				                      this.DatabasePassword,
+				                      this.DefaultDatabse);
 			}
 		}
 
@@ -68,29 +68,28 @@ namespace AbDatabaseHelper
 		}
 
 		/// <summary>
-		/// Executes the SQL
+		/// Executes the SQL.
 		/// </summary>
-		/// <returns>the Execute Result</returns>
+		/// <returns>The SQL</returns>
 		/// <param name="SQL">SQL</param>
+		/// <param name="count">count of SQL</param> 
+		/// <param name="type">Type.</param>
 		/// <param name="args">Arguments.</param>
-		public abstract DataSet ExecuteSQL (string SQL, params DbParameter[] args);
+		public abstract DataSet ExecuteSQL (string SQL, 
+		                                    out int count,
+		                                    CommandType type = CommandType.Text, 
+		                                    params DbParameter[] args);
 
 		/// <summary>
-		/// Executes the SQL without result.
+		/// Executes the SQL non result.
 		/// </summary>
-		/// <returns>the SQL used rows</returns>
-		/// <param name="SQL">SQL</param>
+		/// <returns>The SQL non result.</returns>
+		/// <param name="SQL">SQ.</param>
+		/// <param name="type">Type.</param>
 		/// <param name="args">Arguments.</param>
-		public abstract int ExecuteSQLNonResult (string SQL, params DbParameter[] args);
-
-		/// <summary>
-		/// Executes the SQL with transaction.
-		/// </summary>
-		/// <returns>sql execute resulte</returns>
-		/// <param name="method">Method.</param>
-		/// <param name="level">Level.</param>
-		public abstract DataSet ExecuteSQLWithTrans (DatabaseTransactionDelegate method, 
-		                                             IsolationLevel level = IsolationLevel.ReadCommitted);
+		public abstract int ExecuteSQLNonResult (string SQL, 
+		                                         CommandType type = CommandType.Text, 
+		                                         params DbParameter[] args);
 
 		/// <summary>
 		/// Executes the SQL with trans non result.
@@ -113,6 +112,7 @@ namespace AbDatabaseHelper
 		/// <returns>the data reader</returns>
 		/// <param name="SQL">SQL</param>
 		/// <param name="args">Arguments.</param>
+		[Obsolete("if you want to use this method ,pleasy close database connection and dispose it",false)]
 		public abstract DbDataReader ExecuteSQLWithReader (string SQL, params DbParameter[] args);
 		#region IPlugin implementation
 		public virtual bool Loading ()
@@ -132,19 +132,19 @@ namespace AbDatabaseHelper
 				isChange = true;
 			}
 			if (cfg.IsConfigKeyExists ("User")) {
-				this.DatabasePorts = cfg ["User"];
+				this.DatabaseUser = cfg ["User"];
 			} else {
 				cfg ["User"] = "root";
 				isChange = true;
 			}
 			if (cfg.IsConfigKeyExists ("Password")) {
-				this.DatabasePorts = cfg ["Password"];
+				this.DatabasePassword = cfg ["Password"];
 			} else {
 				cfg ["Password"] = "root";
 				isChange = true;
 			}
 			if (cfg.IsConfigKeyExists ("Database")) {
-				this.DatabasePorts = cfg ["Database"];
+				this.DefaultDatabse = cfg ["Database"];
 			} else {
 				cfg ["Database"] = "Default";
 				isChange = true;
