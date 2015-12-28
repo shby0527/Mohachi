@@ -92,7 +92,10 @@ namespace AbDatabaseHelper
 		                                         params DbParameter[] args);
 
 		/// <summary>
-		/// Executes the SQL with trans non result.
+		/// Executes the SQL with transaction non result.
+		/// if you transaction is throw an exception
+		/// please do not catch it
+		/// we will rollback the data
 		/// </summary>
 		/// <returns>count of used rows</returns>
 		/// <param name="method">Method.</param>
