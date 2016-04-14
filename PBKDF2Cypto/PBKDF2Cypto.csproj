@@ -41,10 +41,4 @@
     <Compile Include="PBKDF2.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\AbPasswdPlugin\AbPasswdPlugin.csproj">
-      <Project>{B3CA7BC1-0B17-4284-9EE9-2E36BE453112}</Project>
-      <Name>AbPasswdPlugin</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

@@ -3,12 +3,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.0</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{4F2137D9-8654-4133-A13C-7FF1289B804C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>UBB2HTML</RootNamespace>
     <AssemblyName>UBB2HTML</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,12 +44,6 @@
     <Compile Include="Exceptions\BadXmlConfigureFile.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\AbTextProcess\AbTextProcess.csproj">
-      <Project>{55C1BDE2-DD6B-4555-8D78-4B1361284B4F}</Project>
-      <Name>AbTextProcess</Name>
-    </ProjectReference>
-  </ItemGroup>
   <ItemGroup>
     <Folder Include="Exceptions\" />
   </ItemGroup>

@@ -46,10 +46,4 @@
     <Compile Include="MySqlDbHelperPlugin.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\AbDatabaseHelper\AbDatabaseHelper.csproj">
-      <Project>{302550B2-0B56-4EAA-AF89-3777B7654CC3}</Project>
-      <Name>AbDatabaseHelper</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
