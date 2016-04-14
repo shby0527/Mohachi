@@ -1,12 +1,17 @@
 ﻿<Properties StartupItem="Mohachi/Mohachi.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="/usr/bin/google-chrome-stable" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="UBB2HTML/Ubb2HtmlPlugin.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Mohachi/Views/Web.config">
     <Files>
       <File FileName="MySqlDatabaseHelper/MySqlDbHelperPlugin.cs" Line="1" Column="1" />
-      <File FileName="test/Test/Program.cs" Line="14" Column="10" />
+      <File FileName="test/Test/Program.cs" Line="1" Column="1" />
       <File FileName="Mohachi/Web.config" Line="1" Column="1" />
       <File FileName="UBB2HTML/RulesConfigure.cs" Line="1" Column="1" />
       <File FileName="UBB2HTML/Ubb2HtmlPlugin.cs" Line="1" Column="1" />
+      <File FileName="AbTextProcess/AbTextProc.cs" Line="1" Column="1" />
+      <File FileName="Mohachi/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="Mohachi/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
+      <File FileName="Mohachi/Views/Home/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Mohachi/Views/Web.config" Line="8" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
